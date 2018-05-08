@@ -1,0 +1,21 @@
+body{
+    background-image: url('../images/images.jpeg');
+    background-repeat: repeat
+}
+.content{
+    width: 1000px;
+    margin: auto
+}
+.title{
+    font-size: 50px;
+    text-align: center;
+    color: blue
+}
+p{
+    font-size: 30px;
+    text-align: justify
+}
+.p1{
+    font-style: italic;
+    background-color: beige
+}
