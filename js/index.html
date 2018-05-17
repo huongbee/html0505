@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="my-div">
+        <h2>Hello Class!</h2>
+    </div>
+    <button id="my-btn">Click Me!</button>
+    
+<!-- <button id="my-btn" onclick="clickMeToShow()">Click Me!</button> -->
+
+
+
+    <script>
+
+        var flag = false
+        var x = document.getElementById('my-div').innerHTML 
+        console.log(x)
+
+        document.getElementById('my-btn').onclick = function(){
+            if(flag == false)
+                document.getElementById('my-div').innerHTML = "<h2>Hello JS</h2>"
+            else 
+                document.getElementById('my-div').innerHTML = x
+            flag = !flag
+        }
+
+
+
+        
+        function clickMeToShow(){
+            
+            if(flag == false)
+                document.getElementById('my-div').innerHTML = "<h2>Hello JS</h2>"
+            else 
+                document.getElementById('my-div').innerHTML = x
+            flag = !flag
+        }
+
+
+        // document.getElementById('my-div').innerText = "<h2>Hello JS</h2>"
+        // document.getElementById('my-div').innerHTML = "<h2>Hello JS</h2>"
+        // var flag = false
+        // function clickMeToShow(){
+        //     if(flag == false)
+        //         document.getElementById('my-div').innerHTML = "<h2>Hello JS</h2>"
+        //     else 
+        //         document.getElementById('my-div').innerHTML = "<h2>Hello World</h2>"
+        //     flag = !flag
+        // }
+    </script>
+
+    <!-- <script src="index.js"></script> -->
+</body>
+</html>
