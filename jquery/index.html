@@ -23,15 +23,15 @@
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <script>
         $(document).ready(function(){
-            function goToTop(px = '200px'){
+            function goToTop(){
                 $('.my-div').animate({ 
-                    "marginTop":px
+                    "marginTop":"0px"
                 },2000)
             }
             function goToleft(){
                 $('.my-div').animate({ 
                     "marginLeft":"0px"
-                },2000,goToTop("0px"))
+                },2000,goToTop)
             }
 
             $('#btnClick').click(function(){
