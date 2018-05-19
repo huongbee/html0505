@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    .my-div{
+        width: 200px;
+        height: 200px;
+        background-color: aqua
+    }
+</style>
+<body>
+    <div class="my-div">
+        <h3>Hello Jquery!</h3>
+    </div>
+    <button id="btnClick">Click me!</button>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script>
+        $(document).ready(function(){
+
+            var flag = true
+            $('#btnClick').click(function(){
+                //var div = $('.my-div').text()
+                // var div = $('.my-div').html()
+                // console.log(div)
+
+                // $('.my-div').hide(1000) //1s 
+                // $('.my-div').show(1000) //1s 
+                // $('.my-div').toggle(1000)
+                // $('.my-div').slideToggle(1000)
+                // $('.my-div').slideUp(1000)
+                // $('.my-div').slideDown(1000)
+                // $('.my-div').fadeToggle(1000)
+                // $('.my-div').fadeIn(1000)
+                // $('.my-div').fadeOut(1000)
+                if(flag){
+                    $('.my-div').css({
+                        "backgroundColor":"red",
+                        "height":"100px",
+                        "width":'100px'
+                    })
+                }
+                else {
+                    $('.my-div').css({
+                        "backgroundColor":"aqua",
+                        "height":"200px",
+                        "width":'200px'
+                    })
+                }
+                flag = !flag
+                
+
+            })
+
+
+        })
+    </script>
+</body>
+</html>

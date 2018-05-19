@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    input{
+        width: 50px
+    }
+</style>
+<body>
+    <input type="text" placeholder="Số a" id="txtSoa">
+    <select id="txtPheptinh">
+        <option value="+">Cộng</option>
+        <option value="-">Trừ</option>
+        <option value="*">Nhân</option>
+        <option value="/">Chia</option>
+        <option value="%">Chia dư</option>
+        
+    </select>
+    <input type="text" placeholder="Số b" id="txtSob">
+    =
+    <input type="text" placeholder="Kết quả" id="txtKetqua" readonly>
+    
+    <button id="tinhTong">Tính</button>
+
+    <script>
+        document.getElementById('tinhTong').onclick = function(){
+            var objA = document.getElementById('txtSoa')
+            var objB = document.getElementById('txtSob')
+            var pheptinh = document.getElementById('txtPheptinh').value
+            var objKQ = document.getElementById('txtKetqua')
+
+            var soA = parseInt(objA.value)
+            var soB = parseInt(objB.value)
+
+            if(isNaN(soA) || soA==''){
+                alert('Vui long nhap so a')
+                objA.value = ''
+                objA.focus()
+                return
+            }
+            if( (isNaN(soB) || soB=='') && soB !=0 ){
+                alert('Vui long nhap so B')
+                objB.value = ''
+                objB.focus()
+                return
+            }
+            if(pheptinh == '+'){
+                objKQ.value = soA+soB
+            }
+            else if(pheptinh == '-'){
+                objKQ.value = soA-soB
+            }
+            else if(pheptinh == '*'){
+                objKQ.value = soA*soB
+            }
+            else if(pheptinh == '/'){
+                if(soB != 0)
+                    objKQ.value = soA/soB
+                else {
+                    alert('B phai khac 0')
+                    objB.focus()
+                    objB.value = ''
+                    return
+                }
+            }
+            else 
+                objKQ.value = soA%soB
+        }
+    </script>
+
+   
+</body>
+</html>
