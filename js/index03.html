@@ -23,6 +23,19 @@
 
     <script>
         document.getElementById('tinhTong').onclick = function(){
+            var objA = document.getElementById('txtSoa')
+            var objB = document.getElementById('txtSob')
+        
+            var soA = parseInt(objA.value) 
+            var soB = parseInt(objB.value)
+
+            if(isNaN(soA)){
+                alert("Vui lòng nhập số")
+                objA.value = ''
+                objA.focus()
+                return false;
+            }
+            document.getElementById('txtKetqua').value = soA+soB
             
         }
     </script>
