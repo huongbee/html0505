@@ -23,9 +23,19 @@ input{
             var price = $('.price').attr('price')
             $('.btnCong').click(function(){
                 var soluong = parseInt($('#txtSoluong').val()) + 1
-                $('#txtSoluong').val(soluong)
-                var newPrice = (soluong*price).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-                $('.price').text('Price: '+newPrice)
+                if(soluong<=20){
+                    $('#txtSoluong').val(soluong)
+                    var newPrice = (soluong*price).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                    $('.price').text('Price: '+newPrice)
+                }
+            })
+            $('.btnTru').click(function(){
+                var soluong = parseInt($('#txtSoluong').val()) - 1
+                if(soluong>=1){
+                    $('#txtSoluong').val(soluong)
+                    var newPrice = (soluong*price).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                    $('.price').text('Price: '+newPrice)
+                }
             })
         })
     </script>
