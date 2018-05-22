@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+input{
+    width: 30px;
+}
+</style>
+<body>
+    <div class="price" price="100000">Price: 100,000</div>
+    <button class="btnTru">-</button>
+    <input type="text" id="txtSoluong" value="1">
+    <button class="btnCong">+</button>
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script>
+        $(document).ready(function(){
+            var price = $('.price').attr('price')
+            $('.btnCong').click(function(){
+                var soluong = parseInt($('#txtSoluong').val()) + 1
+                $('#txtSoluong').val(soluong)
+                var newPrice = (soluong*price).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                $('.price').text('Price: '+newPrice)
+            })
+        })
+    </script>
+</body>
+</html>

@@ -8,17 +8,35 @@
 </head>
 <body>
     
-    <div class="my-div">
+    <div class="my-div" name="This is My Div">
         <h3>Hello Jquery!</h3>
     </div>
-    <button id="btnClick">Click me!</button>
+    <input type="text" id="txt" placeholder="Enter number">
+    <button id="btnClick1" class="btnClickID">Click me 1!</button>
+    <button id="btnClick2" class="btnClickID">Click me 2!</button>
+    <button id="btnClick3" class="btnClickID">Click me 3!</button>
         
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <script>
         $(document).ready(function(){
-            $('#btnClick').on('click',function(){
+            $('.btnClickID').click(function(){
+                // a = $('.btnClickID').attr('id')
+                // var a = $(this).attr('id')
+                // console.log(a)
+                // $(this).text('Button')
+                // $('.my-div').append('<h3>Hello Jquery 2!</h3>')
+                // $('.my-div').prepend('<h3>Hello Jquery 2!</h3>')
+                // var n = $('#txt').val()  //get value
+                $('#txt').val(12345678) // set value
                 
             })
+            // $('#btnClick').click(function(){
+
+            // })
+            // $('#btnClick').on('click',function(){
+            //     var a = $('.my-div').attr('name')
+            //     console.log(a)
+            // })
         })
     </script>
 </body>
